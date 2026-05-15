@@ -1,0 +1,223 @@
+.about {
+  padding: 200px 20px;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 128px;
+  color: #0B0D10;
+  margin-bottom: 36px;
+  font-weight: 900;
+}
+
+.about p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.about-text,
+.about-mission {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.about-text h2,
+.about-mission h2 {
+  font-size: 36px;
+  color: #0B0D10;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-text p,
+.about-mission p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 96px;
+  margin-bottom: 96px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 64px;
+  font-weight: 900;
+  color: #0B0D10;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.process-section {
+  margin-top: 96px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-section h2 {
+  font-size: 36px;
+  color: #0B0D10;
+  margin-bottom: 40px;
+  margin-top: 96px;
+  font-weight: 800;
+  
+  align-self: center;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.about-logo {
+  width: 100px;
+  height: 100px;
+  margin-top: -20px;
+  transform: translateY(10px);
+}
+.accordion {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0B0D10;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-header.active {
+  background-color: #0B0D10;
+  color: #fff;
+}
+
+.step-number {
+  background-color: #0B0D10;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.accordion-header.active .step-number {
+  background-color: #fff;
+  color: #0B0D10;
+}
+
+.step-icon {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #0B0D10;
+}
+
+.accordion-header.active .step-icon {
+  color: #fff;
+}
+
+.step-title {
+  flex: 1;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #fff;
+}
+
+.accordion-content.open {
+  max-height: 200px;
+}
+
+.accordion-content p {
+  padding: 20px;
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
