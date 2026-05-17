@@ -1,11 +1,36 @@
 import React from 'react';
+import { useState } from 'react';
 import './Contact.css'; // Assuming you'll add styles later
 import { FaEnvelope, FaPhone, FaLocationPin } from "react-icons/fa6";
 import logoBlack from '../assets/logo-black.png';
 
 
+
+
 const Contact = () => {
+
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "ce130845-dc34-45fc-b4ef-1565d04731c4");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+  };
+
+
+
+
+
   return (
+    <section id= 'contact'>
     <div className="contact">
       <div className="contact-container">
         <div className='contact-header'><img src={logoBlack} alt="Logo" className="contact-logo" width= '100' height='100' />
@@ -16,10 +41,10 @@ const Contact = () => {
 
           
           <div className="contact-form">
-            <form>
+            <form onSubmit={onSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" placeholder="Enter your name" name="name" required />
+                <input type="text"   id="name" placeholder="Enter your name" name="name" required />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -32,6 +57,7 @@ const Contact = () => {
               </div >
               <div className='button-container'>
                 <button type="submit" className="submit-btn">Send Message</button>
+                {/* <p>{result}</p> */}
 
               </div>
               
@@ -76,6 +102,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

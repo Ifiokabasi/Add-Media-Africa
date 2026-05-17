@@ -40,6 +40,7 @@ const Services = () => {
   ]
 
   return (
+    <section id = 'service'>
     <div className="services">
       <div className="services-container">
         <div className='services-header'><img src={logoWhite} alt="Logo" className="services-logo" width="100" height="100" /><h1>Our Services</h1></div>
@@ -57,6 +58,7 @@ const Services = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import './Work.css';
 import logoWhite from '../assets/logo-white.png';
+import umi from '../assets/Umi.jpg';
+import jay from '../assets/Jayson-Jackson.jpg';
+import bleaching from '../assets/Bleaching-baby-.jpg'
+import hope from '../assets/Hope.jpg'
+import sarah from '../assets/sarah-ogoke.jpg'
+import soyinka from '../assets/Soyinka_.jpg'
 
+ 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
@@ -11,7 +18,7 @@ const Work = () => {
       title: 'On the days I find food, the babies can eat',
       category: 'Documentary',
       description: 'In northern Nigeria, 4.4 million children under five are acutely malnourished – that’s more than double last year’s figure according to the World Food Programme. ',
-      thumbnail: '../assets/Umi.jpg',
+      thumbnail: umi,
       youtubeLink: 'https://youtu.be/M-EoALzsYo0'
 
 
@@ -21,7 +28,7 @@ const Work = () => {
       title: "Concerns over popularity of skin bleaching creams in Nigeria",
       category: 'Documentary',
       description: 'More than three quarters of people use skin-whitening or lightening creams, commonly known as bleaching creams in Nigeria.',
-      thumbnail: 'https://img.youtube.com/vi/djTyHf-7oxo/hqdefault.jpg',
+      thumbnail: bleaching,
       youtubeLink: 'https://youtu.be/djTyHf-7oxo'
     },
     {
@@ -36,8 +43,8 @@ const Work = () => {
       id: 4,
       title: 'Finding Hope',
       category: 'Films',
-      description: 'A story that seeks to Find Hope Okem, a Teenager Abducted at the age of 14',
-      thumbnail: 'https://img.youtube.com/vi/VwEL07NVZ9s&pp=ygUTZmluZGluZyBob3BlIGV0dGFuZw%3D%3D/hqdefault.jpg',
+      description: 'Finding Hope is centinary movie about the hope of Nigeria at 100. It focuses on Hope, a talented and very promising girl, that has been abducted.  The movie is a journey to the truth and an examination of the lives of the principal players.',
+      thumbnail: jay,
       youtubeLink: 'https://www.youtube.com/watch?v=VwEL07NVZ9s&pp=ygUTZmluZGluZyBob3BlIGV0dGFuZw%3D%3D'
     },
     {
@@ -45,16 +52,17 @@ const Work = () => {
       title: "If you can become a mother you can achieve anything ",
       category: 'Interviews',
       description: "Sarah Ogoke is a mother of a toddler, a certified medical doctor, and the only woman to have won the Women’s African Basketball Championship five times.",
-      thumbnail: 'https://img.youtube.com/vi/ESgZgAtH9ew/hqdefault.jpg',
-      youtubeLink: 'https://youtu.be/ESgZgAtH9ew'
+      thumbnail: sarah,
+      youtubeLink: 'https://youtu.be/E4EyGFrZ6rg'
     },
     {
       id: 6,
-      title: "Soyinka: 'Donald Trump is a petty-minded dictator 2",
+      title: "Soyinka: 'Donald Trump is a petty-minded dictator ",
       category: 'Interviews',
       description: "91-year-old, Nigerian author and Nobel Laurate, Wole Soyinka has linked his recent U.S visa revocation to his open criticism of President Donald Trump’s administration's radical stance on immigration. ",
-      thumbnail: 'https://img.youtube.com/vi/E4EyGFrZ6rg/hqdefault.jpg',
-      youtubeLink: 'https://youtu.be/E4EyGFrZ6rg'
+      thumbnail: soyinka,
+      
+      youtubeLink: 'https://youtu.be/ESgZgAtH9ew'
     },
     {
       id: 7,
@@ -81,6 +89,7 @@ const Work = () => {
     : portfolioItems.filter(item => item.category === activeCategory);
 
   return (
+    <section id ='work'>
     <div className="work">
       <div className="work-container">
         <div className='work-header'><img src={logoWhite} alt="Logo" className="work-logo" width= '100' height='100' />
@@ -101,16 +110,26 @@ const Work = () => {
 
         <div className="portfolio-grid">
           {filteredItems.map((item) => (
-            <div key={item.id} className="portfolio-card">
-              <div className="portfolio-image"></div>
+           
+           <a key={item.id}
+              href={item.youtubeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-card">
+                
+           <div className="portfolio-card">
+              <div className="portfolio-image"><img src={item.thumbnail} alt={item.title} />
+              </div>
               <h3>{item.title}</h3>
               <p className="category-tag">{item.category}</p>
               <p className="description">{item.description}</p>
             </div>
+           </a>
           ))}
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

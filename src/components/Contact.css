@@ -1,3 +1,7 @@
+
+html {
+  scroll-behavior: smooth;
+}
 .contact {
   padding: 200px 20px;
   background-color: #FFFFFF;
@@ -185,4 +189,8 @@ input::placeholder {
   width: 100px;
   height: 100px;
   margin-top: -20px;
+}
+
+input, textarea{
+  color:#050504;
 }

@@ -57,7 +57,7 @@ const About = () => {
   };
 
   return (
-    <div className="about">
+    <div className="about" id = 'about'>
       <div className="about-container">
         <div className='about-header'><img src={logoBlack} alt="Logo" className="about-logo" width="100" height="100" /><h1>About Us</h1></div>
         <p>Learn more about ADD Media Africa and our mission</p>

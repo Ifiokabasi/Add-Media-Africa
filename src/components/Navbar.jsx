@@ -13,10 +13,10 @@ export default function Navbar() {
       </div>
 
       <ul className="nav-links">
-        <li>Service</li>
-        <li>Work</li>
-        <li>About</li>
-        <li>Contact Us</li>
+        <li><a href ='#service'>Service</a></li>
+        <li><a href ='#work'>Work</a></li>
+        <li><a href ='#about'>About</a></li>
+        <li><a href ='#contact'>Contact Us</a></li>
       </ul>
       
     </nav>
