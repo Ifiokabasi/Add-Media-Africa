@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#service">Services</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -32,10 +32,20 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-links">
-            <a href="#facebook"><FaFacebook className="social-icon" /></a>
+            <a href="https://www.facebook.com/share/1CVH4GeVnZ/?mibextid=wwXIfr"
+               target="_blank"
+               rel="noopener noreferrer"      
+            ><FaFacebook className="social-icon" /></a>
             <a href="#twitter"><FaTwitter className="social-icon" /></a>
             <a href="#instagram"><FaInstagram className="social-icon" /></a>
-            <a href="#linkedin"><FaLinkedin className="social-icon" /></a>
+
+            <a 
+                href="https://www.linkedin.com/company/add-media-africa/"
+               target="_blank"
+               rel="noopener noreferrer" 
+            
+            
+            ><FaLinkedin className="social-icon" /></a>
           </div>
         </div>
       </div>

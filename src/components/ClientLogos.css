@@ -56,3 +56,38 @@
   font-weight:100;
   margin-top: -7px;
 }
+
+
+
+@media (max-width: 768px){
+
+  .logo-section{
+
+    margin-top: -250px;
+  }
+
+  .logo-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    gap: 10px; 
+    margin-left: 16%;
+    
+
+
+  
+  }
+
+  
+ 
+
+
+
+
+
+
+
+
+
+}
