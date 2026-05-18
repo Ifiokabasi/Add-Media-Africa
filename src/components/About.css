@@ -239,7 +239,7 @@ html {
 }
 
 .about h1 {
-  font-size: 90px;
+  font-size: clamp(48px, 8vw, 128px);
   margin-bottom: 20px;
    color: #0B0D10;
   font-weight: 900;
@@ -247,5 +247,10 @@ html {
 }
 
 
+.stats-section {
+  flex-direction: column;
+
+
   
+}
 }
