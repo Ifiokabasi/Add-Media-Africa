@@ -22,11 +22,6 @@ html {
   font-weight: 900;
 }
 
-.contact p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 40px;
-}
 
 .contact-content {
   
@@ -41,10 +36,11 @@ html {
 
 .contact-form {
   flex: 1;
-  min-width: 280px;
+  min-width: 18rem;
   background-color: #FFFFFF;
   padding: 30px;
   border-radius: 8px;
+
 }
 
 .form-group {
@@ -195,6 +191,25 @@ input, textarea{
   color:#050504;
 }
 
+.contact-desc{
+  font-size: 1.5rem;
+  max-width: 1400px;
+  width: 100%;  
+  margin: auto;
+  line-height: 1.5;
+  margin-top: -1rem;
+  margin-bottom: 10rem;
+}
+
+
+
+
+
+
+
+
+
+/* Tablet */
 
 
 @media (max-width: 768px){
@@ -246,7 +261,47 @@ input, textarea{
     width: 100%;
   }
 
+  .contact-desc{
+    width: 100%;
+    max-width: 600px;
+    margin-top: -4rem;
+    line-height: 1.5;
+    }
+
 
 
   
+}
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .contact-desc{
+    width: 100%;
+    max-width: 300px;
+    font-size: 18px;
+    margin-top: -4rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    }
+
+
+  .contact-form {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
+}
+
+  
+
+
+
+
+
 }

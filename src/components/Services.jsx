@@ -44,8 +44,8 @@ const Services = () => {
     <div className="services">
       <div className="services-container">
         <div className='services-header'><img src={logoWhite} alt="Logo" className="services-logo" width="100" height="100" /><h1>Our Services</h1></div>
-        <p>From concept to delivery, we provide 
-          comprehensive media solutions<br></br> tailored to your needs</p>
+        <p className = 'services-desc'>From concept to delivery, we provide 
+          comprehensive media solutions tailored to your needs</p>
 
         <div className="services-grid">
           {services.map((service, index) => (

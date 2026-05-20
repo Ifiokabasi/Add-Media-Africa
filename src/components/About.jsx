@@ -60,7 +60,7 @@ const About = () => {
     <div className="about" id = 'about'>
       <div className="about-container">
         <div className='about-header'><img src={logoBlack} alt="Logo" className="about-logo" width="100" height="100" /><h1>About Us</h1></div>
-        <p>Learn more about ADD Media Africa and our mission</p>
+        <p className='about-desc'>Learn more about Add Media Africa and our mission</p>
 
         <div className="about-content">
           <div className="about-text">
@@ -79,7 +79,7 @@ const About = () => {
             <h2>Our Mission</h2>
             <p>
               To empower brands and creators through innovative media solutions that
-              deliver exceptional results and <br></br>create meaningful connections with audiences.
+              deliver exceptional results and create meaningful connections with audiences.
             </p>
           </div>
         </div>

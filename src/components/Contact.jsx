@@ -35,7 +35,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className='contact-header'><img src={logoBlack} alt="Logo" className="contact-logo" width= '100' height='100' />
         <h1>Get In Touch</h1></div>
-        <p>Ready to bring your vision to life? Let's start a conversation</p>
+        <div className = 'contact-desc'><p >Ready to bring your vision to life?</p><p> Let's start a conversation</p></div>
 
         <div className="contact-content">
 
