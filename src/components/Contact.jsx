@@ -69,7 +69,7 @@ const Contact = () => {
           <div className="contact-info">
             <h2>Contact <br></br>Information</h2>
             <div className="info-item">
-              <div className="icon-badge"><FaEnvelope style={{ color: 'black', width: '30px', height: '30px' }} /></div> 
+              <div className="icon-badge"><FaEnvelope  /></div> 
               <div>
                 <h3>Email</h3>
                 <p>michael-eme@hotmail.de</p>
@@ -77,7 +77,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="info-item">
-              <div className="icon-badge"><FaPhone style={{ color: 'black', width: '30px', height: '30px' }} /></div>
+              <div className="icon-badge"><FaPhone /></div>
               <div>
                 <h3>Phone</h3>
                 <p>+447760775089</p>
@@ -86,7 +86,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="info-item">
-              <div className="icon-badge"><FaLocationPin style={{ color: 'black', width: '30px', height: '30px' }} /></div>
+              <div className="icon-badge"><FaLocationPin  /></div>
               <div>
                 <h3>Address</h3>
                 <p>Berliner Allee 8<br/> 30175 Hannover, Germany</p>

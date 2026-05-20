@@ -24,12 +24,12 @@ html {
 
 
 .about-desc{
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 40px;
-  max-width: 1200px;
-  width: 100%;
+  font-size: 1.5rem;
+  max-width: 1400px;
+  width: 100%;  
   margin: auto;
+  line-height: 1.5;
+  margin-bottom: 10rem;
 }
 
 .about-content {

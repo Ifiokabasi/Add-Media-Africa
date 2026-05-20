@@ -39,9 +39,10 @@ html {
 }
 
 .services p {
-  font-size: 21px;
   color: #cbd5e1;
   margin-bottom: 100px;
+  max-width: 700px;
+  width: 100%;
 }
 
 .services-grid {
@@ -95,12 +96,12 @@ html {
 
 .services-desc{
   
-  font-size: clamp(16px, 4vw, 24px);
-  max-width: 500px; 
+  font-size: 1.5rem;
+  max-width: 1400px;
   width: 100%;  
   margin: auto;
-  margin-top: -3rem;
-  font-size:20px;
+  line-height: 1.5;
+  margin-bottom: 10rem;
 
 
 }
