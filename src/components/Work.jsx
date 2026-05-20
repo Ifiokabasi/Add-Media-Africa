@@ -94,7 +94,7 @@ const Work = () => {
       <div className="work-container">
         <div className='work-header'><img src={logoWhite} alt="Logo" className="work-logo" width= '100' height='100' />
         <h1>Our Work</h1></div>
-        <p>Showcasing our portfolio of exceptional projects and campaigns</p>
+        <p className = 'work-desc'>Showcasing our portfolio of exceptional projects and campaigns</p>
 
         <div className="category-filters">
           {categories.map((category) => (

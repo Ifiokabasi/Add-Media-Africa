@@ -3,13 +3,12 @@ html {
 }
 
 .services {
-
   margin-bottom: 10px;
-  padding: 100px 20px;
+  padding: clamp(60px, 8vw, 100px) 20px;
   background-color: #000;
   min-height: 100vh;
-  font-family: 'poppins', sans-serif;
-   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 .services-container {
@@ -105,8 +104,13 @@ html {
   margin-bottom: 40px;
 }
 
+ .services {
+    padding: 80px 16px;
+    min-height: auto;
+  }
+
 .services h1 {
-  font-size: 90px;
+  font-size: clamp(3rem, 5vw, 8rem);
   margin-bottom: 20px;
   color: #f8fafc;
   font-weight: 900;
@@ -114,10 +118,14 @@ html {
 }
 
 
-
-
-
-
-
   
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+  .services {
+    padding: 60px 14px;
+    margin-bottom: 0;
+  }
 }

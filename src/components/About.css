@@ -16,11 +16,12 @@ html {
 }
 
 .about h1 {
-  font-size: 128px;
+  font-size: clamp(48px, 8vw, 128px);
   color: #0B0D10;
   margin-bottom: 36px;
   font-weight: 900;
 }
+
 
 .about p {
   font-size: 18px;
