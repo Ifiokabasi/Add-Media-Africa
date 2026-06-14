@@ -77,7 +77,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="info-item">
-              <div className="icon-badge"><FaPhone /></div>
+              <div className="icon-badge" ><FaPhone /></div>
               <div>
                 <h3>Phone</h3>
                 <p>+447760775089</p>
