@@ -40,29 +40,102 @@ const Services = () => {
     }
   ]
 
+
+   // Variants for stagger animation
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 60,
+      scale: 0.95
+    },
+    visible: { 
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+        duration: 0.9,
+        ease: [0.25, 0.1, 0.25, 1],
+        delay: 0.1
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: -30 
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 15,
+        stiffness: 100,
+        duration: 0.5
+      }
+    }
+  };
+
+  const descVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.95
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: {
+        delay: 0.2,
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <motion.section 
       id='service'
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.9, ease: "easeOut" }}
     >
     <div className="services">
       <div className="services-container">
-        <div className='services-header'><img src={logoWhite} alt="Logo" className="services-logo" width="100" height="100" /><h1>Our Services</h1></div>
-        <p className = 'services-desc'>From concept to delivery, we provide 
-          comprehensive media solutions tailored to your needs</p>
+        <motion.div className='services-header'
+        variants={headerVariants}
+        
+        ><img src={logoWhite} alt="Logo" className="services-logo" width="100" height="100" /><h1>Our Services</h1></motion.div>
+        <motion.p 
+        variants={descVariants}
+        
+        className = 'services-desc'>From concept to delivery, we provide 
+          comprehensive media solutions tailored to your needs</motion.p>
 
-        <div className="services-grid">
+        <motion.div className="services-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+             >
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <motion.div key={index} className="service-card" variants={cardVariants}>
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
     </motion.section>
