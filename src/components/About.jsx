@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './About.css';
 import aboutImage from '../assets/About-Image.jpg';
 import logoBlack from '../assets/logo-black.png';
@@ -57,7 +58,13 @@ const About = () => {
   };
 
   return (
-    <div className="about" id = 'about'>
+    <motion.div 
+      className='about'
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.9, ease: "easeOut" }}>
+
       <div className="about-container">
         <div className='about-header'><img src={logoBlack} alt="Logo" className="about-logo" width="100" height="100" /><h1>About Us</h1></div>
         <p className='about-desc'>Learn more about Add Media Africa and our mission</p>
@@ -127,7 +134,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

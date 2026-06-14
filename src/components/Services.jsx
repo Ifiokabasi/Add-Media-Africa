@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion} from 'framer-motion';
 import './Services.css'; // Assuming you'll add styles later
 import logoWhite from '../assets/logo-white.png';
 import { FaVideo, FaCamera, FaPhotoVideo, FaBullhorn, FaYoutube, FaBroadcastTower,  FaMicrophone, FaLaptopCode,   FaCameraRetro, FaUsers  } from "react-icons/fa";
@@ -40,7 +41,13 @@ const Services = () => {
   ]
 
   return (
-    <section id = 'service'>
+    <motion.section 
+      id='service'
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+    >
     <div className="services">
       <div className="services-container">
         <div className='services-header'><img src={logoWhite} alt="Logo" className="services-logo" width="100" height="100" /><h1>Our Services</h1></div>
@@ -58,7 +65,7 @@ const Services = () => {
         </div>
       </div>
     </div>
-    </section>
+    </motion.section>
   );
 };
 
