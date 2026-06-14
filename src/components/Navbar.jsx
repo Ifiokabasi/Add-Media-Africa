@@ -5,6 +5,18 @@ import "./Navbar.css";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  // Close menu when a link is clicked
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
+
+  // Close menu when clicking outside (optional but recommended)
+  const handleOutsideClick = (e) => {
+    if (e.target === e.currentTarget) {
+      setOpen(false);
+    }
+  };
+
   return (
     <nav className="navbar">
       {/* LOGO */}
@@ -20,12 +32,15 @@ export default function Navbar() {
         <span></span>
       </div>
 
-      {/* NAV LINKS */}
-      <ul className={`nav-links ${open ? "active" : ""}`}>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+      {/* NAV LINKS - add onClick to close menu */}
+      <ul 
+        className={`nav-links ${open ? "active" : ""}`}
+        onClick={handleOutsideClick}
+      >
+        <li><a href="#service" onClick={handleLinkClick}>Service</a></li>
+        <li><a href="#work" onClick={handleLinkClick}>Work</a></li>
+        <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+        <li><a href="#contact" onClick={handleLinkClick}>Contact Us</a></li>
       </ul>
     </nav>
   );
