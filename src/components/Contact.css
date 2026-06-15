@@ -128,36 +128,50 @@ input::placeholder {
 }
 
 .info-item {
+
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
- 
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+
+}
+
+.info-item > div {
+  display: flex;
+  flex-direction: column;
 }
 
 .info-item h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
+  
+  
   color: #050504;
+ 
+  
+  margin: 0 0 6px 0;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .info-item p {
   color: #666;
   margin: 0;
+  line-height: 1.5;
 }
 
 .icon-badge {
- 
-  width: 2.3rem ;
-  height: 2.3rem ;
-  background: #d9d9d9;
-  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  flex-shrink: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
+
+
+  background: #d9d9d9;
+  border-radius: 50%;
 }
 
 

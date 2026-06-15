@@ -165,7 +165,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: easeCinematic }}
           >
             ADD Media Africa Creating compelling stories
-            and premium content that<br />resonates with
+            and premium content that resonates with
             audiences worldwide.
           </motion.p>
         </motion.div>
@@ -266,6 +266,9 @@ const Footer = () => {
             </motion.a>
           </motion.div>
         </motion.div>
+        <div className="footer-watermark">
+              ADD MEDIA AFRICA
+        </div>
       </div>
       
       {/* Footer Bottom with fade in */}
