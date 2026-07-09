@@ -1,6 +1,6 @@
 
 import { defineConfig } from 'vite';
-import react from '@vitejs/react-swc'; // or @vitejs/plugin-react
+import react from '@vitejs/plugin-react'; // or @vitejs/plugin-react
 import Sitemap from 'vite-plugin-sitemap';
 
 export default defineConfig({
